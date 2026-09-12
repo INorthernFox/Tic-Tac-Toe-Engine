@@ -1,0 +1,17 @@
+{
+    "name": "TicTacToe.Bot",
+    "rootNamespace": "TicTacToe.Bot",
+    "references": [
+        "TicTacToe.Contracts",
+        "TicTacToe.Engine"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

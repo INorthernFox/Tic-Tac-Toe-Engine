@@ -1,0 +1,11 @@
+{
+  "name": "com.tictactoe.engine",
+  "version": "0.1.0",
+  "displayName": "Tic-Tac-Toe Engine",
+  "description": "Правила игры, контракты и бот. Не зависит от Unity.",
+  "unity": "6000.0",
+  "author": {
+    "name": "INorthernFox",
+    "url": "https://github.com/INorthernFox"
+  }
+}

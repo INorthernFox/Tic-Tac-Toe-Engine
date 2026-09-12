@@ -1,0 +1,13 @@
+<Project>
+
+  <!--
+    Вывод сборки уходит в artifacts~/ — папки с ~ на конце Unity не импортирует.
+    Без этого Unity подхватит собранный TicTacToe.Engine.dll из bin/ и получит
+    дубликат типов: ошибка компиляции с невнятным текстом.
+  -->
+  <PropertyGroup>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)artifacts~/bin/$(MSBuildProjectName)/</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)artifacts~/obj/$(MSBuildProjectName)/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+
+</Project>

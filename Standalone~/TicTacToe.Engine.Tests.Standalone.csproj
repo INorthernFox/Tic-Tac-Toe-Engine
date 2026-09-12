@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Тесты правил без Unity: dotnet test из этой папки.
+    NUnit намеренно 3.x — та же ветка, что в Unity Test Framework.
+    На NUnit 4 классические Assert.AreEqual переехали в ClassicAssert,
+    и один и тот же файл теста перестал бы компилироваться в обоих мирах.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>9</LangVersion>
+    <AssemblyName>TicTacToe.Engine.Tests.Standalone</AssemblyName>
+    <IsPackable>false</IsPackable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../Runtime/**/*.cs" LinkBase="Runtime" />
+    <Compile Include="../Tests/**/*.cs" LinkBase="Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+  </ItemGroup>
+
+</Project>

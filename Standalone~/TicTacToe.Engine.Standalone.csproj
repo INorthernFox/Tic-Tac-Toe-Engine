@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Те же исходники, что компилирует Unity, собранные обычным .NET.
+    Смысл проекта — доказательство: если он собрался, значит в движке нет ни одной
+    ссылки на UnityEngine. Лежит в папке с ~ на конце, поэтому Unity его не видит.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9</LangVersion>
+    <AssemblyName>TicTacToe.Engine.Standalone</AssemblyName>
+    <RootNamespace>TicTacToe</RootNamespace>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../Runtime/**/*.cs" LinkBase="Runtime" />
+  </ItemGroup>
+
+</Project>
